@@ -1,0 +1,18 @@
+<div>
+    <h1>{{titulo}}</h1>
+    
+    
+    <p>En la bodega hay {{cantidadStock}} unidades</p>
+    @if(mostrarDescripcion == true){
+        <p>{{descripcion}}</p>
+    }
+    <button (click)="mostrarOcultarDescripcion()">mostrar/ocultar descripcion</button>
+    <p>precio: {{precio}}</p>
+    <p>cantidad:{{cantidad}}</p>
+    @if (tieneDescuento==true) {
+        <p>Oferta Aproveche</p>
+    }
+
+    <button (click)="incrementarCantidad()">Incrementar cantidad</button>
+    <button (click)="decrementarCantidad()">Decrementar cantidad</button>
+</div>
